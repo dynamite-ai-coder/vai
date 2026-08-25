@@ -15,11 +15,11 @@ GROQ_API_KEYS = [
 ]
 
 MODEL_NAMES = [
-    os.getenv("MODEL_1", "llama-3.3-70b-versatile"),
+    os.getenv("MODEL_1", "deepseek-r1-distill-llama-70b"),
     os.getenv("MODEL_2", "llama-3.3-70b-versatile"),
-    os.getenv("MODEL_3", "llama-3.3-70b-versatile"),
-    os.getenv("MODEL_4", "llama-3.3-70b-versatile"),
-    os.getenv("MODEL_5", "llama-3.3-70b-versatile"),
+    os.getenv("MODEL_3", "mixtral-8x7b-32768"),
+    os.getenv("MODEL_4", "llama-3.1-8b-instant"),
+    os.getenv("MODEL_5", "gemma2-9b-it"),
 ]
 
 SYNTHESIS_MODEL = os.getenv("SYNTHESIS_MODEL", "llama-3.3-70b-versatile")

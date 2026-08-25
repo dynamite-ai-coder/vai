@@ -10,13 +10,13 @@ User → Web UI → Orchestrator → 5 Groq Models (parallel) → Synthesis → 
 
 ### Model Roles
 
-| Model | Role | Specialty |
-|-------|------|-----------|
-| 1 | 🧠 Reasoning | Problem decomposition, logic |
-| 2 | 🔍 Research | Information gathering, analysis |
-| 3 | ⚖️ Critical | Error detection, challenges |
-| 4 | ⚙️ Engineering | Technical solutions, code |
-| 5 | 🎯 Strategic | Comparison, optimization |
+| Model | Role | Groq Model | Specialty |
+|-------|------|------------|-----------|
+| 1 | 🧠 Reasoning | deepseek-r1-distill-llama-70b | Problem decomposition, logic |
+| 2 | 🔍 Research | llama-3.3-70b-versatile | Information gathering, analysis |
+| 3 | ⚖️ Critical | mixtral-8x7b-32768 | Error detection, challenges |
+| 4 | ⚙️ Engineering | llama-3.1-8b-instant | Technical solutions, code |
+| 5 | 🎯 Strategic | gemma2-9b-it | Comparison, optimization |
 
 ## Quick Start (Termux)
 
@@ -56,11 +56,11 @@ GROQ_API_KEY_3=gsk_xxxxx
 GROQ_API_KEY_4=gsk_xxxxx
 GROQ_API_KEY_5=gsk_xxxxx
 
-MODEL_1=llama-3.3-70b-versatile
+MODEL_1=deepseek-r1-distill-llama-70b
 MODEL_2=llama-3.3-70b-versatile
-MODEL_3=llama-3.3-70b-versatile
-MODEL_4=llama-3.3-70b-versatile
-MODEL_5=llama-3.3-70b-versatile
+MODEL_3=mixtral-8x7b-32768
+MODEL_4=llama-3.1-8b-instant
+MODEL_5=gemma2-9b-it
 
 SYNTHESIS_MODEL=llama-3.3-70b-versatile
 HOST=127.0.0.1

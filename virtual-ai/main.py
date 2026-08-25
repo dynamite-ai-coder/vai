@@ -128,7 +128,16 @@ def main():
     logger.info(f"API Keys configured: {configured}/5")
     if configured == 0:
         logger.warning("No API keys configured! Create a .env file with your Groq API keys.")
-    uvicorn.run(app, host=HOST, port=PORT, log_level="info")
+    
+    workers = int(os.getenv("WEB_CONCURRENCY", "1"))
+    uvicorn.run(
+        app,
+        host=HOST,
+        port=PORT,
+        log_level="info",
+        workers=workers,
+        timeout_keep_alive=30,
+    )
 
 
 if __name__ == "__main__":

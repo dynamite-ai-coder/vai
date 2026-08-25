@@ -41,7 +41,7 @@ pip install --upgrade pip --quiet
 pip install -r requirements.txt --quiet
 echo "[OK] Dependencies installed"
 
-echo "[...] Setting up browser-use dependencies..."
+echo "[...] Setting up optional dependencies..."
 pip install browser-use --quiet 2>/dev/null || echo "[WARN] browser-use optional - will use fallback"
 
 if [ ! -f ".env" ]; then
@@ -52,6 +52,7 @@ else
 fi
 
 mkdir -p static
+chmod +x run.sh stop.sh
 
 echo ""
 echo "========================================="
@@ -59,6 +60,9 @@ echo "  SETUP COMPLETE"
 echo "========================================="
 echo ""
 echo "1. Edit .env with your 5 Groq API keys"
+echo "   Each model uses a different API key"
+echo "   Models: deepseek-r1, llama-3.3, mixtral, llama-3.1, gemma2"
+echo ""
 echo "2. Run: ./run.sh"
 echo "3. Open: http://127.0.0.1:22200"
 echo ""
