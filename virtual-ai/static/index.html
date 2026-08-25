@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Virtual AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-left">
+                <h1>VIRTUAL AI</h1>
+                <span class="subtitle">Multi-Model Intelligence</span>
+            </div>
+            <div class="header-right">
+                <button id="clearBtn" class="btn-icon" title="Clear chat">🗑️</button>
+                <button id="statusBtn" class="btn-icon" title="Model status">📊</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="chat-panel">
+                <div id="modelStatus" class="model-status-bar">
+                    <div class="model-indicator" data-model="1">
+                        <span class="dot"></span>
+                        <span class="model-name">Reasoning</span>
+                        <span class="model-state">ready</span>
+                    </div>
+                    <div class="model-indicator" data-model="2">
+                        <span class="dot"></span>
+                        <span class="model-name">Research</span>
+                        <span class="model-state">ready</span>
+                    </div>
+                    <div class="model-indicator" data-model="3">
+                        <span class="dot"></span>
+                        <span class="model-name">Critical</span>
+                        <span class="model-state">ready</span>
+                    </div>
+                    <div class="model-indicator" data-model="4">
+                        <span class="dot"></span>
+                        <span class="model-name">Engineering</span>
+                        <span class="model-state">ready</span>
+                    </div>
+                    <div class="model-indicator" data-model="5">
+                        <span class="dot"></span>
+                        <span class="model-name">Strategy</span>
+                        <span class="model-state">ready</span>
+                    </div>
+                </div>
+
+                <div id="chatMessages" class="chat-messages">
+                    <div class="welcome-message">
+                        <div class="welcome-icon">🤖</div>
+                        <h2>Welcome to Virtual AI</h2>
+                        <p>A coordinated multi-model intelligence system. Ask anything and receive a synthesized answer from 5 specialized AI agents.</p>
+                    </div>
+                </div>
+
+                <div id="analysisPanel" class="analysis-panel hidden">
+                    <div class="analysis-header">
+                        <span>MODEL ANALYSIS</span>
+                        <button id="closeAnalysis" class="btn-icon-small">✕</button>
+                    </div>
+                    <div id="analysisContent" class="analysis-content"></div>
+                </div>
+
+                <div class="input-area">
+                    <div class="input-wrapper">
+                        <textarea id="messageInput" placeholder="Type your message... (Shift+Enter for newline)" rows="1"></textarea>
+                        <div class="input-actions">
+                            <label class="browser-toggle" title="Use browser agent">
+                                <input type="checkbox" id="browserToggle">
+                                <span class="toggle-label">🌐</span>
+                            </label>
+                            <button id="sendBtn" class="btn-send" disabled>
+                                <span>▶</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="browser-panel" id="browserPanel">
+                <div class="browser-header">
+                    <span>BROWSER</span>
+                    <button id="closeBrowser" class="btn-icon-small">✕</button>
+                </div>
+                <div class="browser-content">
+                    <div class="browser-placeholder">
+                        <div class="browser-icon">🌐</div>
+                        <p>Browser preview will appear here when browser agent is active.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="statusModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>System Status</h3>
+                <button class="btn-icon modal-close">✕</button>
+            </div>
+            <div id="statusContent" class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
